@@ -3,14 +3,22 @@
 
 <head>
   <title>Advanced Objects</title>
+  <style>
+    body {
+      text-align: center;
+      font-family: sans-serif;
+      font-size: 3vw;
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Advanced Objects</h1>
-  <p>Please load this file in VSCode and Chrome, and open the Console in Chrome Dev Tools.</p>
-  <p>Work through the challenges found inside the script tag in this document,
-    until the Console reports all tests passing.</p>
+  <div>
+    <img id="lightbulb" onclick="changeImage()" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/93927/pic_bulboff.gif"
+      width="200" height="360">
 
+    <p>Click the light bulb to turn on/off the light.</p>
+  </div>
   <script>
     // In CHALLENGES 1-4 you will flesh out some classes.
 
@@ -368,6 +376,18 @@
       }
     }
   </script>
+  <!-- The following script is not my code -->
+  <script>
+    function changeImage() {
+      var image = document.getElementById('lightbulb');
+      if (image.src.match("bulbon")) {
+        image.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/93927/pic_bulboff.gif";
+      } else {
+        image.src = "https://s3-us-west-2.amazonaws.com/s.cdpn.io/93927/pic_bulbon.gif";
+      } 
+    }
+  </script>
+
 </body>
 
 </html>
